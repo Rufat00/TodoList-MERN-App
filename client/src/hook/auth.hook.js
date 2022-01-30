@@ -10,7 +10,7 @@ export const useAuth = () =>{
         localStorage.setItem('user', JSON.stringify({
             _id: userId
         }))
-    })
+    },[])
     const logout = () => {
         setId(null)
         localStorage.removeItem('user')

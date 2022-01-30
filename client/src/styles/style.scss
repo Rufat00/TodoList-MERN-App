@@ -166,7 +166,7 @@ body{
     }
 }
 .TodoList{
-    .todo{
+    .todoContent{
         padding:25px 0 ;
         @extend .container;
         min-height: calc(100vh - 120px);
@@ -212,7 +212,49 @@ body{
         }
 
         .todos{
+            height: calc(100vh - 250px);
             overflow-y: auto;
+            padding: 25px 0;
+            background: lighten($blue-100, 8);
+        }
+        .todo{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 15px;
+            padding: 15px;
+            font-size: 20px;
+            border-radius: 15px;
+            background: white;
+            .value{
+                display: flex;
+                div:nth-child(1){
+                    margin: auto;
+                    margin-right: 10px;
+                    font-size: 35px;
+                }
+                div:nth-child(2){
+                    h5{
+                        font-size: 20px;
+                    }
+                    p{
+                        font-size: 18px;
+                        color: $gray-700;
+                        font-weight: 400;
+                    }
+                }
+            }
+            svg{
+                cursor: pointer;
+                height: 1.2em;
+                width: 1.2em;
+                margin: 0 5px;
+                transition: color 0.3s;
+                &:hover{
+                    transition: color 0.3s;
+                    color: $redR;
+                }
+            }
         }
     }
 }
