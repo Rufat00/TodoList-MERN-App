@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/NavBar';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../components/Footer';
+import Homebutton from '../components/HomeButton';
 
 const Mainpage = () => {
 
@@ -15,6 +16,7 @@ const Mainpage = () => {
                 <button onClick={()=> navigate('/todo-list')} >Begin</button>
             </div>
             <Footer/>
+            <Homebutton/>
         </main>
     );
 }

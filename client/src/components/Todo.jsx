@@ -1,7 +1,7 @@
 import React from 'react';
 import {BiPencil, BiTrashAlt} from 'react-icons/bi'
 
-const Todo = ({title, text, index, deleteFunc}) => {
+const Todo = ({title, text, index, deleteFunc,changeFunc}) => {
     return (
         <div className='todo'>
             <div className='value'>
@@ -12,7 +12,7 @@ const Todo = ({title, text, index, deleteFunc}) => {
                 </div>
             </div>
             <div>
-                <BiPencil/>
+                <BiPencil onClick={changeFunc}/>
                 <BiTrashAlt onClick ={deleteFunc} />
             </div>
         </div>
