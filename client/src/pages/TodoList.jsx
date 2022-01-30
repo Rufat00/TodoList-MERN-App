@@ -130,11 +130,11 @@ const Todolist = () => {
                     <form onSubmit={e => e.preventDefault()}>
                         <div>
                             <label>Title: </label>
-                            <input value={value.title} onChange={e => setValue({...value,title: e.target.value})} maxLength={16} type="text" placeholder='Your title here...'/>
+                            <input autoComplete="off" value={value.title} onChange={e => setValue({...value,title: e.target.value})} maxLength={16} type="text" placeholder='Your title here...'/>
                         </div>
                         <div>
                             <label>Text: </label>
-                            <input value={value.text} onChange={e => setValue({...value,text: e.target.value})} maxLength={150} type="text" placeholder='Your text here...'/>
+                            <input autoComplete="off" value={value.text} onChange={e => setValue({...value,text: e.target.value})} maxLength={150} type="text" placeholder='Your text here...'/>
                         </div>
                         <div>
                             {mod.is === 'update' ? <><button onClick={()=>updateTodo(mod.id)} >Change</button><button onClick={updateAll} >Cancel</button></> : <button onClick={createTodo} >Add Todo</button>}

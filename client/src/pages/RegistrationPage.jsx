@@ -55,11 +55,11 @@ const Registrationpage = () => {
                 <form className='loginForm'>
                     <div>
                         <label>Name:</label>
-                        <input onChange={changeHandler} name='name' placeholder='Max length 16...' type="text" className="validate" maxLength={'16'}/>
+                        <input autoComplete="off" onChange={changeHandler} name='name' placeholder='Max length 16...' type="text" className="validate" maxLength={'16'}/>
                     </div>
                     <div>
                         <label>Password:</label>
-                        <input onChange={changeHandler} name='password' placeholder='Max length 16...' type="text" className="validate" maxLength={'16'}/>
+                        <input autoComplete="off" onChange={changeHandler} name='password' placeholder='Max length 16...' type="text" className="validate" maxLength={'16'}/>
                     </div>
                 </form>
                 <footer> 
