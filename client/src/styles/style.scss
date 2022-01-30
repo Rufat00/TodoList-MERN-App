@@ -1,0 +1,218 @@
+@import "colors.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background: $lightR;
+}
+.container {
+    margin: auto;
+    height: fit-content;
+    max-width: 1320px;
+    @media (max-width: 1400px) {
+        max-width: 1140px;
+    }
+    @media (max-width: 1200px) {
+        max-width: 960px;
+    }
+    @media (max-width: 992px) {
+        max-width: 720px;
+    }
+    @media (max-width: 768px) {
+        max-width: 540px;
+    }
+    @media (max-width: 576px) {
+        max-width: 100%;
+    }
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navBar {
+    color: white;
+    background: $gray-900;
+    height: 60px;
+    border-bottom: 1px solid $gray-600;
+    nav {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        justify-content: space-between;
+        h3 {
+            font-size: 25px;
+        }
+        .loging{
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            background: none;
+            border: none;
+        }
+    }
+}
+.footer{
+    height: 60px;
+    background: $gray-900;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        height: inherit;
+        align-items: center;
+        color: white;
+    }
+}
+.login {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .auth {
+        background: white;
+        height: 350px;
+        width: 450px;
+        border-radius: 5px;
+        header {
+            border-radius: 5px 5px 0 0;
+            background: $gray-900;
+            color: white;
+            padding: 7px;
+            font-size: 25px;
+            text-align: center;
+        }
+        .loginForm {
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            div {
+                margin: 30px;
+                font-size: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                input {
+                    background: $gray-400;
+                    font-weight: 300;
+                    width: 350px;
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 18px;
+                    padding: 5px;
+                    &:focus {
+                        outline: 1px solid $gray-900;
+                    }
+                }
+            }
+        }
+        footer {
+            padding: 0 15px;
+            height: 60px;
+            border-top: 1px solid $gray-900;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            a {
+                font-size: 20px;
+                color: black;
+
+                text-decoration: underline;
+            }
+            button {
+                font-size: 18px;
+                padding: 6px 30px;
+                border: none;
+                color: white;
+                background: $gray-900;
+                border-radius: 7px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.mainPage{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    .mainContent{
+        h2{
+            margin: 30px 0;
+            font-size: 50px;
+        }
+        button{
+            font-size: 18px;
+            font-weight: 500;
+            padding: 7px 60px;
+            background: none;
+            color: $redR;
+            border: 2px solid $redR;
+            cursor: pointer;
+            transition: color 0.5s, background 0.5s ease-in;
+            &:hover{
+                background: $redR;
+                color: white;
+                transition: color 0.5s, background 0.5s ease-in;
+            }
+        }
+    }
+}
+.TodoList{
+    .todo{
+        padding:25px 0 ;
+        @extend .container;
+        min-height: calc(100vh - 120px);
+        form{
+            width: inherit;
+            padding: 20px;
+            display: flex;
+            border: 2px solid $gray-900;
+            label{
+                font-size: 20px;
+                padding: 0 10px;
+            }
+            input {
+                background: $gray-300;
+                font-weight: 300;
+                width: 350px;
+                resize: both;
+                border: none;
+                border-radius: 5px;
+                font-size: 18px;
+                padding: 5px;
+                &:focus {
+                    outline: 1px solid $redR;
+                }
+            }
+            div{
+                margin: auto;
+            }
+            button{
+                font-size: 18px;
+                padding: 7px 30px;
+                background: $redR;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                cursor: pointer;
+                transition: background 0.3s;
+                &:hover{
+                    transition: background 0.3s;
+                    background: darken($redR,10);
+                }
+            }
+        }
+
+        .todos{
+            overflow-y: auto;
+        }
+    }
+}
