@@ -45,7 +45,7 @@ const Todolist = () => {
         getTodos(source.token)
 
         return () => {source.cancel()}
-    },[getTodos])
+    })
 
     const createTodo = async () => {
         try {
