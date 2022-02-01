@@ -2,6 +2,9 @@ const express = require('express')
 const mongo = require('mongoose')
 const cors = require('cors')
 
+require('dotenv').config()
+const PORT = process.env.PORT || 5000
+
 const app =  express()
 app.use(express.json())
 app.use(cors())
@@ -16,8 +19,8 @@ async function server(){
             useUnifiedTopology: true,
         })
 
-        app.listen(5000,()=>{
-            console.log('server runing on http://localhost:5000');
+        app.listen(PORT,()=>{
+            console.log('server runing');
         })
 
     }
