@@ -2,7 +2,7 @@
 
 This is my first full stack project.  
 Project created by MERN - ( MongoDb , ExpressJs , React , NodeJs  ).  
-Create your account and saves all your todos ;)
+Create your account and save all your todos ;)
 <br>
 ____
 ## Main packages: 
