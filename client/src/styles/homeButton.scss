@@ -1,0 +1,22 @@
+.homeButton{
+    position: fixed;
+    bottom: 8vh;
+    right: 30px;
+    height: 50px;
+    width: 50px;
+    background: $gray-900;
+    color: white;
+    border-radius: 50%; 
+    cursor: pointer;
+    transition: background 0.3s;
+    @extend %center;
+    svg{
+        height: 30px;
+        width: 30px;
+        margin-top: -2px;
+    }
+    &:hover{
+        transition: background 0.3s;
+        background: $redR;
+    }
+}

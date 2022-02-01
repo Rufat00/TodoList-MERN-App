@@ -1,0 +1,82 @@
+.login {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .auth {
+        background: white;
+        min-height: 350px;
+        width: 450px;
+        border-radius: 5px;
+        margin-top: 65px;
+        header {
+            @extend %center;
+            border-radius: 5px 5px 0 0;
+            background: $gray-900;
+            color: white;   
+            padding: 7px;
+            font-size: 25px;
+        }
+        .loginForm {
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            div {
+                margin: 30px;
+                font-size: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                input {
+                    background: $gray-400;
+                    font-weight: 300;
+                    width: 350px;
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 18px;
+                    padding: 5px;
+                    &:focus {
+                        outline: 1px solid $gray-900;
+                    }
+                }
+                @include breakPoint(Extra-small){
+                    margin: 15px 0;
+                    input{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        footer {
+            padding: 0 15px;
+            height: 60px;
+            border-top: 1px solid $gray-900;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            a {
+                font-size: 20px;
+                color: black;
+
+                text-decoration: underline;
+            }
+            button {
+                font-size: 18px;
+                padding: 6px 30px;
+                border: none;
+                color: white;
+                background: $redR;
+                border-radius: 7px;
+                cursor: pointer;
+            }
+        }
+        @include breakPoint(Extra-small){
+                width: 100%;
+                border-radius: 0;
+                header{
+                    border-radius: 0;
+                }
+        }
+    }
+}

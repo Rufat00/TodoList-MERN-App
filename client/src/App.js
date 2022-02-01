@@ -1,6 +1,6 @@
 import Loginpage from './pages/LoginPage';
 import { BrowserRouter,Route,Routes} from "react-router-dom";
-import './styles/style.scss'
+import './styles/_style.scss'
 import Registrationpage from './pages/RegistrationPage';
 import Mainpage from './pages/MainPage';
 import { AuthContext } from './context/AuthContext';

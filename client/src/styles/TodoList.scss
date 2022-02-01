@@ -1,0 +1,138 @@
+.TodoList{
+    height: 100vh; 
+    overflow-y: hidden;
+    .todoContent{
+        padding:25px 0 ;
+        @extend .container;
+        min-height: calc(100vh - 120px);
+        display: flex;
+        flex-direction: column;
+        @include breakPoint(Extra-small){
+            padding: 0;
+        }
+        form{
+            width: inherit;
+            padding: 20px;
+            display: flex;
+            border: 2px solid $gray-900;
+            label{
+                font-size: 20px;
+                padding: 0 10px;
+            }
+            input {
+                background: $gray-300;
+                font-weight: 300;
+                width: 350px;
+                resize: both;
+                border: none;
+                border-radius: 5px;
+                font-size: 18px;
+                padding: 5px;
+                &:focus {
+                    outline: 1px solid $redR;
+                }
+            }
+            div{
+                margin: auto;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            button{
+                font-size: 18px;
+                padding: 7px 30px;
+                background: $redR;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                cursor: pointer;
+                margin: 3px 5px;
+                transition: background 0.3s;
+                &:hover{
+                    transition: background 0.3s;
+                    background: darken($redR,10);
+                }
+            }
+            @include breakPoint(Large){
+                input{width: 250px;}
+            }
+            @include breakPoint(Medium){
+                padding: 20px 10px ;
+                flex-direction: column;
+                div{
+                    display: flex;
+                    margin: 10px 0;
+                }
+                input{
+                    width: 600px;
+                }
+                label{
+                    text-align: center;
+                }
+            }
+            @include breakPoint(Extra-small){
+                input{
+                    width: 100%;
+                }
+                div{
+                    flex-wrap: wrap;
+                }
+                border: none;
+            }
+        }
+
+        .todos{
+            flex-grow: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 25px 0;
+            background: lighten($blue-100, 8);
+        }
+        .todo{
+            width: calc(100% - 30px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 15px;
+            padding: 15px;
+            font-size: 20px;
+            border-radius: 15px;
+            background: white;
+            .value{
+                display: flex;
+                div:nth-child(1){
+                    margin: auto;
+                    margin-right: 10px;
+                    font-size: 35px;
+                }
+                div:nth-child(2){
+                    word-break: break-all;
+                    h5{
+                        font-size: 20px;
+                    }
+                    p{
+                        font-size: 18px;
+                        color: $gray-700;
+                        font-weight: 400;
+                    }
+                }
+            }
+            svg{
+                cursor: pointer;
+                height: 1.2em;
+                width: 1.2em;
+                margin: 0 5px;
+                transition: color 0.3s;
+                &:hover{
+                    transition: color 0.3s;
+                    color: $redR;
+                }
+            }
+            @include breakPoint(Extra-small){
+                flex-wrap: wrap;
+            }
+        }
+    }
+    @include breakPoint(Extra-small){
+        overflow-y: auto;
+    }
+}

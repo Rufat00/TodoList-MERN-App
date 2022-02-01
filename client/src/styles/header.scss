@@ -1,0 +1,23 @@
+.navBar {
+    color: white;
+    background: $gray-900;
+    height: 60px;
+    border-bottom: 1px solid $gray-600;
+    nav {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        justify-content: space-between;
+        h3 {
+            font-size: 25px;
+        }
+        .loging{
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            background: none;
+            border: none;
+        }
+    }
+}
